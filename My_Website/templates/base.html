@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <title>My Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0px;
+      border-radius: 0;
+      padding:20px;
+    }
+     footer {
+
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" style="margin-bottom:0px" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'profile' %}">Profile</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+{%block content%}
+{%endblock content%}
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div style="color: #000000.;" class="wow fadeInUp footer-copyright">
+                    <p><center>Contact Me
+                    </br>jinu2001@yahoo.com.com
+                    <br> +91 9656794373</center>
+                    <div class="social-icons">
+                        <center>
+                        <a href="https://www.facebook.com/jinu.paul.90"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/futuresmile.career/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
